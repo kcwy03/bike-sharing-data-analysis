@@ -6,6 +6,7 @@ The project is an data analysis workflow that transforms raw Excel data into act
 The main goal was to answer a core business question: "Please provide recommendations on raising prices next year". To achieve this, a dashboard showing key performance metrics was requested, including hourly revenue, profit and revenue trends, seasonal revenue, and rider demographics
 
 SQL Query:
+```sql
 WITH cte AS 
 (SELECT * 
     FROM bike_share_yr_0
@@ -28,3 +29,4 @@ riders*price - COGS*riders as profit
     FROM cte
 LEFT JOIN cost_table
 ON cte.yr = cost_table.yr
+```
